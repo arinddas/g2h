@@ -2,16 +2,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import NextLink from "next/link"
-import { VStack, Heading, Box, LinkOverlay, LinkBox} from "@chakra-ui/layout"
+import { VStack, Heading, Box, LinkOverlay, LinkBox, useColorModeValue} from "@chakra-ui/layout"
 import { Text, Button } from '@chakra-ui/react'
 import { useState, useEffect} from 'react'
 import {ethers} from "ethers"
 import ReadERC20 from "components/ReadERC20"
 import TransferERC20 from "components/TransferERC20"
 import BurnERC20 from "components/BurnERC20"
+import MintERC20 from "components/MintERC20"
 
 declare let window:any
-const addressERC20 = '0x29d79F8ac7D22A4b1a5E7630F3d48E8d291D3f11'
+const addressERC20 = '0x7d58ee0e31888C0780A8a6c58f6e273cCC6f1201'
 
 const Home: NextPage = () => {
   const [balance, setBalance] = useState<string | undefined>()
@@ -104,6 +105,13 @@ const Home: NextPage = () => {
         <Box  mb={0} p={4} w='100%' borderWidth="3px" borderRadius="lg">
           <Heading my={4}  fontSize='xl'>Read H2G Token Info</Heading>
           <ReadERC20 
+            addressContract={addressERC20}
+            currentAccount={currentAccount}
+          />
+        </Box>
+        <Box  mb={0} p={4} w='100%' borderWidth="3px" borderRadius="lg">
+          <Heading my={4}  fontSize='xl'>Mint H2G Token</Heading>
+          <MintERC20 
             addressContract={addressERC20}
             currentAccount={currentAccount}
           />

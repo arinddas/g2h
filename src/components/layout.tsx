@@ -15,7 +15,7 @@ export function Layout(props: Props) {
         {props.children}
       </Container>
       <Center as="footer" bg={useColorModeValue('green.200', 'green.900')} p={6}>
-          <Heading size="md">Green Hydrogen POC DAPP by IBM - 2022</Heading>
+          <Heading size="md">Green Hydrogen POC DAPP - 2022</Heading>
       </Center>
     </div>
   )

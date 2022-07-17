@@ -88,6 +88,7 @@ export default function ReadERC20(props:Props){
          <Text><b>Blockchain</b>: Polygon Mumbai Testnet</Text>
         <Text><b>H2G Token Contract</b>: {addressContract}</Text>
         <Text><b>H2G Token totalSupply</b>: {totalSupply} {symbol}</Text>
+        <Text><b>H2G Token explorer</b>: <a href="https://mumbai.polygonscan.com/address/0x7d58ee0e31888c0780a8a6c58f6e273ccc6f1201" target="_blank"> Click here !!</a></Text>
         <Text my={4}><b>H2G Token in current account</b>: {balance} {symbol}</Text>
     </div>
   )

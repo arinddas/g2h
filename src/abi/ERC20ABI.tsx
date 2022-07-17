@@ -8,6 +8,7 @@ export const ERC20ABI = [
     // Authenticated Functions
     "function transfer(address to, uint256 amount) external returns (bool)",
     "function burn(uint amount) external returns (bool)",
+     "function mint(uint amount) external returns (bool)",
     // Events
     "event Transfer(address indexed from, address indexed to, uint256 value)"
 ];
